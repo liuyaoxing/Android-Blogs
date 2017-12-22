@@ -25,48 +25,47 @@ REM Service log configuration
 
 mkdir C:\AppStore\service\log\
 
-set PR_LOGPREFIX=%SERVICE_NAME%
-set PR_LOGPATH=C:\AppStore\service\log\
-set PR_STDOUTPUT=C:\AppStore\service\log\stdout.txt
-set PR_STDERROR=C:\AppStore\service\log\stderr.txt
-set PR_LOGLEVEL=Error
+set PR_LOGPREFIX=%SERVICE_NAME%  
+set PR_LOGPATH=C:\AppStore\service\log\  
+set PR_STDOUTPUT=C:\AppStore\service\log\stdout.txt  
+set PR_STDERROR=C:\AppStore\service\log\stderr.txt  
+set PR_LOGLEVEL=Error  
 
-REM Path to java installation
+REM Path to java installation  
 
-set PR_JVM=C:\Program Files\Java\jre7\bin\client\jvm.dll
+set PR_JVM=C:\Program Files\Java\jre7\bin\client\jvm.dll  
 if exist "%PR_JVM%" goto foundJvm  
-set PR_JVM=C:\Program Files (x86)\Java\jre7\bin\client\jvm.dll
+set PR_JVM=C:\Program Files (x86)\Java\jre7\bin\client\jvm.dll  
 if exist "%PR_JVM%" goto foundJvm  
 set PR_JVM=auto  
 
 :foundJvm  
-echo Using JVM:%PR_JVM% 
+echo Using JVM:%PR_JVM%  
 
-set PR_CLASSPATH=C:\AppStore\service\abwebsocket.jar
+set PR_CLASSPATH=C:\AppStore\service\abwebsocket.jar  
 
-REM Startup configuration
+REM Startup configuration  
 
-set PR_STARTUP=auto
-set PR_STARTMODE=jvm
-set PR_STARTCLASS=ab.websocket.WebSocketServer
-set PR_STARTMETHOD=start
+set PR_STARTUP=auto  
+set PR_STARTMODE=jvm  
+set PR_STARTCLASS=ab.websocket.WebSocketServer  
+set PR_STARTMETHOD=start  
 
-REM Shutdown configuration
+REM Shutdown configuration  
 
-set PR_STOPMODE=jvm
-set PR_STOPCLASS=ab.websocket.WebSocketServer
-set PR_STOPMETHOD=stop
+set PR_STOPMODE=jvm  
+set PR_STOPCLASS=ab.websocket.WebSocketServer  
+set PR_STOPMETHOD=stop  
 
-REM JVM configuration
+REM JVM configuration  
 
-set PR_JVMMS=64
-set PR_JVMMX=128
-set PR_JVMSS=4000
+set PR_JVMMS=64  
+set PR_JVMMX=128  
+set PR_JVMSS=4000  
 
-REM Install service
+REM Install service  
 
-%PR_INSTALL% //IS//%SERVICE_NAME%
+%PR_INSTALL% //IS//%SERVICE_NAME%  
 
-NET START %SERVICE_NAME%
-
+NET START %SERVICE_NAME%  
 ·
