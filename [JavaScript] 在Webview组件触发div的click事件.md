@@ -2,7 +2,7 @@
 
 但是，我们可以通过dispatchEvent事件触发。
 
-·
+·  
 	StringBuffer js = new StringBuffer();  
 	s.append("var x = document.getElementsByClassName(\"div_name\");");  
 	js.append("for(var i = 0; i < x.length; i++) {");  
