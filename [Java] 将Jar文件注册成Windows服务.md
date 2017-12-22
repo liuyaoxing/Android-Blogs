@@ -15,11 +15,11 @@
 
 ## service.bat
 ·
-@echo off
-set SERVICE_NAME=ABWebSocketServer
-set PR_INSTALL=C:\AppStore\service\bin\prunsrv.exe 
+@echo off  
+set SERVICE_NAME=ABWebSocketServer  
+set PR_INSTALL=C:\AppStore\service\bin\prunsrv.exe  
 
-C delete %SERVICE_NAME%
+SC delete %SERVICE_NAME%
 
 REM Service log configuration
 
