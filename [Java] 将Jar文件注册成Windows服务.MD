@@ -1,8 +1,13 @@
-环境准备：
+##环境准备：
   1、Java 开发或者运行环境：http://download.oracle.com/otn/java/jdk/7u80-b15/jre-7u80-windows-i586.exe
   2、下载 Apache Commons Daemon Windows：http://www.apache.org/dist/commons/daemon/binaries/windows/
  
-首先新建一个Java工程，新建Java服务器类，实现org.apache.commons.daemon.Daemon接口，同时还得提供 public static void start(String[] args) 方法，否则服务启动的时候会提示：xxxx 服务由于下列服务特定错误而终止: 函数不正确。
+##Java工程
+
+首先新建一个Java工程，新建Java服务器类，实现org.apache.commons.daemon.Daemon接口，同时还得提供 public static void start(String[] args) 方法，
+否则服务启动的时候会提示：xxxx 服务由于下列服务特定错误而终止: 函数不正确。
+
+##导出可执行jar包
 
 工程新建后，导出成可执行jar包，然后编写注册服务的service.bat文件,
 
